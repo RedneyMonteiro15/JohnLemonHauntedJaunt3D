@@ -6,16 +6,20 @@ public class GameEnding : MonoBehaviour
 {
     public float fadeDuration = 1f;
     public GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    bool m_IsPlayerAtExit;
+
     void OnTriggerEnter (Collider other)
     {
         if (other.gameObject == player)
+        {
+            m_IsPlayerAtExit = true;
+        }
+    }
+
+    void Update ()
+    {
+        if(m_IsPlayerAtExit)
         {
 
         }
