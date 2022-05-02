@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Observer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform player;
+
+    bool m_IsPlayerInRange;
+
+    void OnTriggerEnter (Collider other)
     {
-        
+        if (other.transform == player)
+        {
+            m_IsPlayerInRange = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit (Collider other)
     {
-        
+        if (other.transform == player)
+        {
+            m_IsPlayerInRange = false;
+        }
     }
 }
