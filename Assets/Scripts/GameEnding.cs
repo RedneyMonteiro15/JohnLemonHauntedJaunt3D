@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEnding : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class GameEnding : MonoBehaviour
     {
         if (m_IsPlayerAtExit)
         {
+            //gameEnding.CaughtPlayer();
             EndLevel (exitBackgroundImageCanvasGroup, false);
         }
         else if (m_IsPlayerCaught)
