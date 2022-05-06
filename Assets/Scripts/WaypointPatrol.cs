@@ -6,13 +6,14 @@ using UnityEngine.AI;
 
 public class WaypointPatrol : MonoBehaviour
 {
-    public Transform[] waypoints;
-    int m_CurrentWaypointIndex;
     public NavMeshAgent navMeshAgent;
-    // Start is called before the first frame update
+    public Transform[] waypoints;
+
+    int m_CurrentWaypointIndex;
+
     void Start ()
     {
-        navMeshAgent.SetDestination (waypoints[0].position);
+        navMeshAgent.SetDestination(waypoints[0].position);
     }
 
     void Update ()
